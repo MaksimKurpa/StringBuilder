@@ -1,0 +1,11 @@
+framework module StringBuilder {
+  umbrella header "StringBuilder.h"
+
+  export *
+  module * { export * }
+}
+
+module StringBuilder.Swift {
+    header "StringBuilder-Swift.h"
+    requires objc
+}

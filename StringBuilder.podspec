@@ -13,7 +13,10 @@ Pod::Spec.new do |s|
   s.osx.deployment_target = "10.9"
   s.watchos.deployment_target = "2.0"
   s.source       = { :git => "https://github.com/mattwyskiel/StringBuilder.git", :tag => "#{s.version}" }
-  s.source_files  = "StringBuilder/StringBuilder.swift"
+s.source_files = ''
   s.framework  = "Foundation"
   s.requires_arc = true
+s.subspec 'Source' do |source| source.source_files = 'StringBuilder/StringBuilder.swift' end
+s.subspec 'Binary' do |binary| binary.vendored_frameworks = 'framework/StringBuilder.framework' end
+s.subspec 'Source' do |source| source.source_files = 'StringBuilder/StringBuilder.swift' end
 end
